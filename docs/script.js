@@ -38,7 +38,21 @@ function launchConfetti() {
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.querySelector('.btn');
   btn.addEventListener('click', () => {
-    alert('こんにちは！');
+    showToast('こんにちは！');
     launchConfetti();
   });
+
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'custom-toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.add('show');
+    }, 10);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 300);
+    }, 2000);
+  }
 });

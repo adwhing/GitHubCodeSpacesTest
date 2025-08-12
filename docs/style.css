@@ -1,3 +1,26 @@
+.custom-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: rgba(255,255,255,0.98);
+  color: #4f3ca7;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.2rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(80,80,80,0.13);
+  opacity: 0;
+  z-index: 100;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.custom-toast.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
 body {
   margin: 0;

@@ -93,3 +93,14 @@ p {
   pointer-events: none;
   z-index: 10;
 }
+
+.confetti-piece {
+  position: absolute;
+  will-change: transform, top, left, opacity;
+  box-shadow: 0 2px 8px rgba(80, 80, 80, 0.08);
+  border-radius: 4px;
+  opacity: 0.8;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transition: top 1.6s cubic-bezier(.39,.575,.565,1), left 1.6s cubic-bezier(.39,.575,.565,1), transform 1.6s;
+}
